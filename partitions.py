@@ -22,7 +22,7 @@ class Partitions():
 			if temp.startswith("charset"):
 				linelist = temp.split("=")
 				name = linelist[0].split().pop(-1)
-				coordslist = linelist[1].split()
+				coordslist = linelist[1].strip(",;").split()
 				self.coordsdict[name]=coordslist
 			if ":" in temp:
 				#print(temp)
